@@ -5,9 +5,6 @@ function App() {
   return (
     <div className="App">
         <Start/>
-        <form action = "/blog" method = "post">
-          <button type = "submit">Submit</button>
-        </form>
 
     </div>
   );

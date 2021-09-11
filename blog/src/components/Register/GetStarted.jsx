@@ -3,6 +3,7 @@ import axios from "axios";
 import Register from "./Register";
 import Blog from "../Blogs/Blog";
 
+
 function Start() {
   const [register, setRegister] = useState(false);
   const [isLoggedIn, setisLoggedIn] = useState(false);
@@ -26,25 +27,27 @@ function Start() {
 
   return (
     <div>
-      {!isLoggedIn 
-      ? <div>
-        {!register && (
-          <div id="start-div">
-            <h1>CoviDelight</h1>
-            <h4>Get Started</h4>
-            <button onClick={HandleClick}>
-              <i className="fas fa-angle-double-right">Start</i>
-            </button>
-          </div>
-        )}
-        {register && 
-            <Register/>
-        }
+      {!isLoggedIn ? (
+        <div>
+          {!register && (
+            <div id="start-div">
+              
+              <div>
+                <h1>Covi Delight</h1>
+                
+                <button onClick={HandleClick}>
+                <h4>Get Started</h4>
+                </button>
+              </div>
+            </div>
+          )}
+          {register && <Register />}
         </div>
-         : <div>
-            <Blog/>
-        </div>}
-      
+      ) : (
+        <div>
+          <Blog />
+        </div>
+      )}
     </div>
   );
 }

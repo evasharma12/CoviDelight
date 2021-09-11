@@ -1,3 +1,88 @@
-#start-div{
-  background-color: aqua;
+* {
+  margin: 0;
+}
+
+#start-div {
+  overflow: hidden;
+  background-image: url("./images/startbg.jpg");
+  opacity: 0.8;
+  background-repeat: none;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+#start-div div {
+  opacity: 1;
+  padding: 20%;
+}
+#start-div h1,
+h4 {
+  opacity: 1;
+}
+#start-div h1 {
+  /* background-image: linear-gradient(45deg ,#fff, rgb(182, 227, 245) ,blue, rgb(52, 52, 148));
+  background-clip: text;
+  color: transparent; */
+  
+  font-family: Serif;
+  font-size: 500%;
+  font-style: italic;
+  color: black;
+  font-weight: 700;
+  /* animation: gradient 10s linear 0s infinite; */
+}
+@keyframes gradient {
+  0% {
+    color: black;
+  }
+  50% {
+      color: rgb(241, 205, 205);
+  }
+  100%{
+    color: black;
+  }
+}
+@media (max-width: 550px){
+  #start-div h1{
+    font-size: 4rem;
+  }
+}
+#start-div button {
+  margin-top: 10vh;
+  font-family: Serif;
+  display: inline-block;
+  padding: 1% 2%;
+  font-size: 2rem;
+  border-radius: 30px;
+  background-color: rgb(99, 58, 245);
+  color: white;
+  
+  border: 0;
+  box-shadow: 2px 2px 3px 3px rgb(206, 204, 204);
+  
+}
+#start-div button h4{
+  font-weight: 100;
+}
+#start-div button:hover{
+  box-shadow: 2px 2px 3px 3px rgb(206, 204, 204) inset;
+  cursor: pointer;
+  background-color: white;
+  animation: shake 0.3s linear;
+  color: rgb(99, 58, 245);
+}
+@keyframes shake{
+  0%{
+    transform: translateX(0px);
+  }
+  20%{
+    transform: translateX(10px);
+  }60%{
+    transform: translateX(0px);
+  }80%{
+    transform: translateX(-15px);
+  }100%{
+    transform: translateX(2px);
+  }
 }
