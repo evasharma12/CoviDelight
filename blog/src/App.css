@@ -4,7 +4,7 @@
 
 #start-div {
   overflow: hidden;
-  background-image: url("./images/startbg.jpg");
+  background-image: url("https://i.pinimg.com/564x/df/45/69/df45691dd5c4babdcded20d056832699.jpg");
   opacity: 0.8;
   background-repeat: none;
   background-size: cover;
@@ -14,7 +14,7 @@
 
 #start-div div {
   opacity: 1;
-  padding: 20%;
+  padding: 27%;
 }
 #start-div h1,
 h4 {
@@ -28,7 +28,7 @@ h4 {
   font-family: Serif;
   font-size: 500%;
   font-style: italic;
-  color: black;
+  color: white;
   font-weight: 700;
   /* animation: gradient 10s linear 0s infinite; */
 }
@@ -66,11 +66,11 @@ h4 {
   font-weight: 100;
 }
 #start-div button:hover{
-  box-shadow: 2px 2px 3px 3px rgb(206, 204, 204) inset;
+  box-shadow: 2px 2px 3px 3px white;
   cursor: pointer;
-  background-color: white;
+  background-color: #e561f7;
   animation: shake 0.3s linear;
-  color: rgb(99, 58, 245);
+  color: black;
 }
 @keyframes shake{
   0%{

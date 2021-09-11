@@ -27,56 +27,58 @@ function Register() {
       <div className="flex-container">
         <div class="flex left-div" width="50%">
           <h2 id="left-heading">Covi Delight</h2>
-          <p id="left-parah">Sign up to Continue ...</p>
+          <p id="left-parah">{isregistered ? "Sign In to Continue...": "Register to Continue..."}</p>
         </div>
-      
 
-      <div className="flex right-div">
-        {/* <h2 style = "text-align: center;">{isregistered ? "Sign In" : "Register Here"}</h2> */}
-        <form method="post" action="/login" id="login-form">
-          {!isregistered && (
-            <label htmlFor="name">
-              Full Name:
+        <div className="flex right-div">
+          <h2>{isregistered ? "Sign In" : "Register Here"}</h2>
+          <div id="right-inner-div">
+            <form method="post" action="/login" id="login-form">
+              {!isregistered && (
+                <input
+                  className="input"
+                  placeholder="Full Name"
+
+                  required
+                  onChange={handleInput}
+                  type="text"
+                  id="name"
+                  value={userInfo.name}
+                  name="name"
+                ></input>
+              )}
               <input
+                className="input"
+                placeholder="Email"
                 required
                 onChange={handleInput}
-                type="text"
-                id="name"
-                value={userInfo.name}
-                name="name"
+                type="email"
+                id="email"
+                value={userInfo.email}
+                name="email"
               ></input>
-            </label>
-          )}
-          <label htmlFor="email">
-            Email:
-            <input
-              required
-              onChange={handleInput}
-              type="email"
-              id="email"
-              value={userInfo.email}
-              name="email"
-            ></input>{" "}
-          </label>
-          <label htmlFor="pass">
-            Password:
-            <input
-              required
-              onChange={handleInput}
-              type="password"
-              id="pass"
-              value={userInfo.password}
-              name="password"
-            ></input>{" "}
-          </label>
-          <button type="submit" onChange={useEffect}>
-            {isregistered ? "Sign In" : "Register Here"}
-          </button>
-        </form>
-        <button onClick={handleChange}>
-          {isregistered ? "Register" : "Sign In"}
-        </button>
-      </div>
+              <input
+                className="input"
+                placeholder="Password"
+                required
+                onChange={handleInput}
+                type="password"
+                id="pass"
+                value={userInfo.password}
+                name="password"
+              ></input>
+              <button className = "button" type="submit" onChange={useEffect}>
+                {isregistered ? "Sign In" : "Register Here"}
+              </button>
+            </form>
+            <div id = "right-align-div">
+            <button id = "right-parah" onClick={handleChange}>
+              {isregistered ? "Register" : "Sign In"}
+            </button>
+            </div>
+            
+          </div>
+        </div>
       </div>
     </div>
   );
