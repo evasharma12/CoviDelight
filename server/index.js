@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const User = require("./models/User");
+const Blog = require("./models/Blog");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -20,21 +21,43 @@ app.use(function (req, res, next) {
 app.use(express.json());
 
 let login = false;
+let input;
 
 app.get("/blog", (req, res) => {
 //   res.send();
 if(login){
-    res.send();
+    res.send(input);
 }
 });
 
 app.post("/blog", (req, res) => {
-  res.send("Successful");
+  res.send(input);
   console.log("Blog connected to node");
 });
 
+//ADD BLOG TO DATABASE
+app.post("/add-blog", (req,res)=>{
+  const newBlog = JSON.parse(JSON.stringify(req.body));
+  console.log(newBlog);
+  const blog = new Blog({
+    id: newBlog.id,
+    title: newBlog.title,
+    category: newBlog.category,
+    imageURL: newBlog.imageURL,
+    content: newBlog.content,
+  }); 
+  blog.save(function(err){
+    if(err){
+      console.log(err);
+    } else{
+      console.log("Blog saved to db");
+    }
+  })
+  res.redirect("/blog");
+})
+
 app.post("/login", (req, res) => {
-  const input = JSON.parse(JSON.stringify(req.body));
+  input = JSON.parse(JSON.stringify(req.body));
   // console.log(input);
   if (input.name) {
     const user = new User({
@@ -65,6 +88,7 @@ app.post("/login", (req, res) => {
           } else {
             // console.log(user);
             login = true;
+            input = user;
             res.redirect("/blog");
           }
         }
