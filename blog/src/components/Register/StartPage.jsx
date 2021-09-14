@@ -40,7 +40,7 @@ function StartPage(props) {
           <br />
 
           <p id="tag-parah">
-            A platform which helps you to overcome Covid Trauma cause by lack of
+            A platform which helps you to overcome Covid Trauma caused by lack of
             interaction with people and the outer world.
           </p>
             </div>

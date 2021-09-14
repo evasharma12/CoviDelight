@@ -1,6 +1,6 @@
 /* //NAVBAR */
 #navbar{
-    background-color: white;
+    background-color: beige;
 }
 #navbar ul{
     padding: 1% 0;
@@ -100,9 +100,9 @@
     background-position: left;
     
 }
-@media screen and (max-width:650px) {
+@media (max-width:650px) {
     .flex{
-        display: inline-block;
+        display: inline;
     }
     .left{
         padding: 5% 0;

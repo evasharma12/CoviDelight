@@ -24,13 +24,14 @@ function Register() {
   }
   return (
     <div id="register">
-      <div className="flex-container">
-        <div class="flex left-div">
+      <h1><i class="fas fa-pills"/>        CoviDelight</h1>
+      <div className="flex-container2">
+        <div class="flex2 left-div">
           <h2 id="left-heading">Covi Delight</h2>
           <p id="left-parah">{isregistered ? "Sign In to Continue...": "Register to Continue..."}</p>
         </div>
 
-        <div className="flex right-div">
+        <div className="flex2 right-div">
           <h2>{isregistered ? "Sign In" : "Register Here"}</h2>
           <div id="right-inner-div">
             <form method="post" action="/login" id="login-form">

@@ -1,48 +1,55 @@
-/* body{
-    padding: 3% 10%;
-    background-color: #fff;
-} */
 #register{
-    padding: 10%;
+  background-color: rgb(43, 43, 43);
+  padding-top: 3%;
+}
+#register h1{
+    color: rgb(222, 223, 194);
+    text-align: center;
+    font-weight: 100;
+    font-size: 3rem;
     
 }
-.flex-container {
-  
+.flex-container2 {
+  padding: 5% 10%;
   display: flex;
 }
-.flex {
+.flex2 {
   flex: 1;
 }
 .left-div {
-  padding: 0 15%;
-  text-align: center;
+  padding: 15%;
   border-radius: 5% 0 0 5%;
-  background-color: cornsilk;
-  background-image: url("https://i.pinimg.com/564x/c8/58/cf/c858cf7d9ac688838ec5e6629e53917f.jpg");
+
+  background-image: url("https://i.pinimg.com/564x/cf/fd/48/cffd48322ee2ae980e5395f038b9fd1e.jpg");
+  opacity: 0.8;
   background-size: cover;
+  box-shadow: 2px 3px 1px 1px beige;
 }
 
 #left-heading {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 200;
   font-style: italic;
+  
 }
 #left-parah {
   color: #fff;
   font-family: sans-serif;
   font-size: 1rem;
-  margin-left: 35%;
   margin-top: 5%;
+
 }
 
 /* RIGHT DIV */
 
 .right-div {
-  padding: 14%;
-  border: 3px solid #6f008b;
-;
-  border-radius: 0 0 5% 0;
+  background-color: rgb(250, 250, 250);
+  padding: 5%;
+  /* border: 1px solid #6f008b; */
+  border-radius: 0 5% 5% 0;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 1px 1px beige;
 }
 .right-div h2{
     text-align: center;
@@ -54,10 +61,11 @@
 .input {
   padding: 3%;
   size: 100;
+  background-color: rgb(250, 250, 250);
   /* margin-top: %; */
   margin-bottom: 5%;
   border: 0;
-  border-bottom: 3px solid #cf9fff;
+  border-bottom: 2px solid black;
   width: 90%;
   display: block;
   outline: none;
@@ -65,28 +73,28 @@
 .input:hover {
   border: 0;
   border-radius: 20px;
-  background-color: rgb(236, 234, 234);
+  background-color: rgb(241, 240, 223);
 }
 #right-inner-div {
   padding: 5% 3%;
 }
 
 .button {
-  color: black;
+  color: white;
   font-size: 1rem;
   font-weight: 500;
   margin-top: 20%;
   padding: 3% 0;
   border: 0;
   width: 90%;
-  background-color: #a574d6;
+  background-color: black;
   border-radius: 20px;
 }
 .button:hover{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     cursor: pointer;
-    box-shadow: 3px 3px 1px 1px rgb(182, 180, 180) ;
+    box-shadow: 3px 3px 1px 1px rgb(182, 180, 180) inset;
 }
 #right-align-div{
     margin-top: 3%;
@@ -95,14 +103,15 @@
 #right-parah {
   margin: 10% 13% 5% 7%;
   text-align: center;
-  color: #6f008b;
+  background-color: transparent;
   border: 0;
-  background-color: white;
+  
   padding: 1%;
 }
 #right-parah:hover{
     cursor: pointer;
-    background-color: rgb(233, 232, 232);
+    background-color: beige;
+    padding: 1% 7%;
     border-radius: 5px;
 }
 
@@ -110,15 +119,16 @@
 
 
 
-@media (max-width: 550px) {
-  .flex-container {
-    display: block;
+@media (max-width:650px) {
+  .flex-container2{
+    display: inline;
   }
-  .left-div {
+  .left-div{
     border-radius: 20px 20px 0 0;
+    margin: 5% 15%;
   }
-  .right-div {
-      border-radius: 0 0 20px 20px;
-      
+  .right-div{
+    border-radius: 0 0 20px 20px;
+    margin: 0 15%;
   }
 }
