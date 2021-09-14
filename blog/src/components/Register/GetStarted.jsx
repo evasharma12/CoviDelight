@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Register from "./Register";
 import Blog from "../Blogs/Blog";
-
+import StartPage from "./StartPage";
 
 function Start() {
   const [register, setRegister] = useState(false);
@@ -32,6 +32,7 @@ function Start() {
   };
 
   function HandleClick() {
+    console.log("triggered");
     setRegister(true);
   }
 
@@ -41,16 +42,8 @@ function Start() {
         <div>
           {!register && (
             <div id="start-div">
-              
-              <div>
-              
-                <h1>Covi Delight</h1>
-                
-                <button onClick={HandleClick}>
-                <h4>Get Started</h4>
-                </button>
-              </div>
-              
+
+              <StartPage Click = {HandleClick}/>
             </div>
           )}
           {register && <Register />}

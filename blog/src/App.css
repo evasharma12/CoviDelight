@@ -4,78 +4,15 @@
 
 #start-div {
   overflow: hidden;
-  background-color: #050220;
-  background-image: url("./images/texture1.png");
-  opacity: 0.8;
+  background-color: rgb(27, 27, 27);  
+  padding: 0%;
   background-repeat: none;
   background-size: cover;
   height: 100vh;
   text-align: center;
 }
-#start div img{
-  position: absolute;
-  
-}
-#start-div div {
-  opacity: 1;
-  padding: 12%;
-}
-#start-div h1,
-h4 {
-  opacity: 1;
-}
-#start-div h1 {
-  /* background-image: linear-gradient(45deg ,#fff, rgb(182, 227, 245) ,blue, rgb(52, 52, 148));
-  background-clip: text;
-  color: transparent; */
-  
-  font-family: 'Azeret Mono', monospace;
-  font-size: 500%;
-  
-  color: #DBE6FD;
-  font-weight: 700;
-  /* animation: gradient 10s linear 0s infinite; */
-}
-@keyframes gradient {
-  0% {
-    color: black;
-  }
-  50% {
-      color: rgb(241, 205, 205);
-  }
-  100%{
-    color: black;
-  }
-}
-@media (max-width: 550px){
-  #start-div h1{
-    font-size: 4rem;
-  }
-}
-#start-div button {
-  margin-top: 20vh;
-  font-family: Serif;
-  display: inline-block;
-  padding: 1% 2%;
-  font-size: 2rem;
-  border-radius: 30px;
-  background-color: #DBE6FD;
-  color: black;
-  
-  border: 0;
-  /* box-shadow: 2px 2px 3px 3px rgb(206, 204, 204) inset; */
-  
-}
-#start-div button h4{
-  font-weight: 100;
-}
-#start-div button:hover{
-  box-shadow: 2px 2px 3px 3px white;
-  cursor: pointer;
-  background-color: #FFE3DE;
-  animation: shake 0.3s linear;
-  color: black;
-}
+
+
 @keyframes shake{
   0%{
     transform: translateX(0px);

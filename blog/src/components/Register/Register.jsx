@@ -25,7 +25,7 @@ function Register() {
   return (
     <div id="register">
       <div className="flex-container">
-        <div class="flex left-div" width="50%">
+        <div class="flex left-div">
           <h2 id="left-heading">Covi Delight</h2>
           <p id="left-parah">{isregistered ? "Sign In to Continue...": "Register to Continue..."}</p>
         </div>

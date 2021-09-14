@@ -8,7 +8,6 @@ const userSchema = new mongoose.Schema({
     name: String,
     email: String,
     password: String,
-    blogs: [mongoose.Schema.Types.Mixed],
 });
 
 module.exports = mongoose.model('User', userSchema);

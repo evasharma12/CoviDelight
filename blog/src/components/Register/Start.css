@@ -1,0 +1,120 @@
+/* //NAVBAR */
+#navbar{
+    background-color: white;
+}
+#navbar ul{
+    padding: 1% 0;
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    
+}
+
+#navbar li{
+    float: left;
+    
+}
+.p{
+    margin: 0.7% 1.5% 0 1.5%;
+}
+#navbar li a{
+    text-decoration: none;
+    color: rgb(114, 114, 114);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#navbar li a:hover{
+    color: black;
+}
+#navbar li i{
+    
+    font-size: 2rem;
+}
+#logo{
+    color: black;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#login{
+    width: 100%;
+    text-align: right;
+    
+}
+#login-button{
+    margin-right: 0;
+    margin: 0 5% 0 0 ;
+    border: 0;
+    background-color: rgb(0, 0, 0);
+    padding: 0.5% 2%;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#login-button:hover{
+    background-color: rgb(63, 63, 63);
+}
+/* LANDING PAGE */
+.flex{
+    padding: 9% 0%;
+    display: flex;
+}
+.right, .left{
+    flex: 1;
+    
+}
+/* LEFT DIV */
+.left{
+    padding: 10% 0;
+    text-align: left;
+}
+.left div{
+    padding: 0 10%;
+}
+
+#tag{
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: white;
+}
+#tag-parah{
+    margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: rgb(190, 189, 189)
+}
+#left-img{
+    display: none;
+}
+/* RIGHT DIV */
+.right{
+    
+    padding: 2%;
+    background-image: url("../../images/lights.jpg");
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    
+}
+@media screen and (max-width:650px) {
+    .flex{
+        display: inline-block;
+    }
+    .left{
+        padding: 5% 0;
+        background-color: rgb(27, 27, 27);  
+    }
+    .left div{
+        margin-right: 5%;
+    }
+    .right{
+        display: none;
+    }
+    #left-img{
+        display: initial;
+    }
+}
