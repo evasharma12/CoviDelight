@@ -20,8 +20,6 @@ function AddBlog(user) {
     });
   }
 
-  function handleSubmit(event) {}
-
   const style = {
     display: "none",
   };
@@ -29,16 +27,19 @@ function AddBlog(user) {
   return (
     <div id="add-blog">
       <div id="create-blog">
+        <h1 id = "add-blog-head"><i class="fas fa-pen-fancy"></i>    Unleash your writer</h1>
         <form id="blog-input" method="post" action="/add-blog">
-          <input type="text" value={user.id} name="id" style={style} />
-          <input type="text" value={user.name} name="name" style={style} />
+          <input id = "addBlog-input" type="text" value={user.id} name="id"  style = {style}/>
+          <input id = "addBlog-input" type="text" value={user.name} name="name" style = {style}/>
           <input
+          id = "addBlog-input"
             onChange={handleInput}
             type="text"
             placeholder="Title of your Blog"
             name="title"
           />
           <select
+          id = "addBlog-input"
             onChange={handleInput}
             type="text"
             placeholder="Choose Category"
@@ -55,22 +56,24 @@ function AddBlog(user) {
             <option>Current affairs</option>
           </select>
           <input
+          id = "addBlog-input"
             onChange={handleInput}
             type="text"
             placeholder="Enter image URL"
             name="imageURL"
           />
-          <img src={data.imageURL} alt="blog-img" />
+          <div id = "img-div">
+          <img id = "addBlog-img" src={data.imageURL} alt="blog-img" />
+            </div>
+          
           <input
+          id = "addBlog-input"
             onChange={handleInput}
             type="text"
             placeholder="Write your content here"
             name="content"
           />
-          <button onClick={handleSubmit}>Submit</button>
-        </form>
-        <form method="post" action="/logout">
-          <button type="submit">Logout</button>
+          <button >Submit</button>
         </form>
       </div>
     </div>

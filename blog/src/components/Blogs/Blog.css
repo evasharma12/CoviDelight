@@ -83,3 +83,52 @@ button{
     
     font-family: monospace;
 }
+
+/* ADD BLOG PAGE */
+
+#add-blog{
+    background-image: url("https://i.pinimg.com/564x/fb/cd/75/fbcd75065d595988389b5fc325b3eaf8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3% 10%;
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+#add-blog-head{
+    text-align: left;
+}
+#blog-input{
+    padding: 2%;
+    margin-top: 5%;
+    text-align: center;
+    border: 2px solid black;
+}
+#addBlog-input{
+    display: inline-block;
+    width: 60%;
+    outline: none;
+    margin-bottom: 3%;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+}
+#addBlog-input:hover{
+    background-color: rgb(228, 228, 228);
+    padding: 1%;
+    border-radius: 20px;
+}
+#img-div{
+    background-color: white;
+    margin: 5% 15%;
+    border-radius: 20px;
+    background-color: rgb(160, 160, 160);
+    
+}
+#addBlog-img{
+    margin:0;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgb(211, 211, 211);
+    
+    
+}
