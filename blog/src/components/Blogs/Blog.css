@@ -1,5 +1,19 @@
+/* COMMON BLOGS PAGE */
+#blogs{
+    background-image: url("https://i.pinimg.com/564x/df/a4/45/dfa4457a015ca3697688285dbc299040.jpg");
+    
+}
+button{
+    border: 0;
+    background-color: transparent;
+    text-decoration: none;
+}
+#add-blog-link{
+    color: rgb(114, 114, 114);
+    font-family: Arial, Helvetica, sans-serif;
+}
 #blog{
-    padding: 5% 10%;
+    
 }
 #blog-input img{
     width: 10vw;

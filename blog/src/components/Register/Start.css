@@ -67,7 +67,7 @@
 }
 /* LEFT DIV */
 .left{
-    padding: 10% 0;
+    padding: 7% 0;
     text-align: left;
 }
 .left div{
@@ -86,8 +86,31 @@
     font-size: 1.2rem;
     color: rgb(190, 189, 189)
 }
+#first-icons{
+    padding: 0;
+    text-align: center;
+}
+#first-icons i{
+    color: rgb(190, 189, 189);
+    margin-left: 5%;
+    margin-top: 15%;
+}
+#first-icons i:hover{
+    color: beige;
+}
+#github{
+    margin: 0;
+    display: inline-block;
+}
+
 #left-img{
     display: none;
+}
+#made-by{
+    color: beige;
+    font-family: monospace;
+    text-align: center;
+    margin-top: 2%;
 }
 /* RIGHT DIV */
 .right{
@@ -103,9 +126,11 @@
 @media (max-width:650px) {
     .flex{
         display: inline;
+        
     }
     .left{
-        padding: 5% 0;
+        padding: 15% 0 0 0;
+        text-align: center;
         background-color: rgb(27, 27, 27);  
     }
     .left div{
