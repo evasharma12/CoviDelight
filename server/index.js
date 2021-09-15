@@ -24,9 +24,9 @@ let login = false;
 
 let input;
 let blogs;
-let info = [];
 
 app.get("/blog", (req, res) => {
+let info = [];
 //   res.send();
 if(login){
     Blog.find({}, function(err,allBlogs){
@@ -37,9 +37,9 @@ if(login){
         info.push(blogs);
         // console.log(allBlogs);
       }
+    res.send(info);
       
     })
-    res.send(info);
 }
 });
 
