@@ -22,10 +22,19 @@ app.use(express.json());
 
 let login = false;
 let input;
+let blogs;
 
 app.get("/blog", (req, res) => {
 //   res.send();
 if(login){
+    Blog.find({}, function(err,blogs){
+      if(err){
+        console.log(err);
+      } else{
+        console.log(blogs);
+      }
+      
+    })
     res.send(input);
 }
 });
@@ -41,6 +50,7 @@ app.post("/add-blog", (req,res)=>{
   console.log(newBlog);
   const blog = new Blog({
     id: newBlog.id,
+    name: newBlog.name,
     title: newBlog.title,
     category: newBlog.category,
     imageURL: newBlog.imageURL,
