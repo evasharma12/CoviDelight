@@ -13,6 +13,22 @@ import axios from "axios";
 
 function Blog(user) {
   const [createBlog, setCreateBlog] = useState(false);
+  const [blogs, setBlogs] = useState();
+  let res;
+
+  const getBlogs = async()=>{
+    res = await axios.get("http://localhost:8000/blog");
+    const arr = res.data;
+    // const blogs = arr[arr.length-1];
+    setBlogs(arr[arr.length-1]);
+    console.log(blogs);
+  }
+
+  useEffect(()=>{
+    getBlogs();
+  }, [res]);
+
+
   function handleAddBlog(){
     setCreateBlog(true);
   }

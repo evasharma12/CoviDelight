@@ -21,21 +21,25 @@ app.use(function (req, res, next) {
 app.use(express.json());
 
 let login = false;
+
 let input;
 let blogs;
+let info = [];
 
 app.get("/blog", (req, res) => {
 //   res.send();
 if(login){
-    Blog.find({}, function(err,blogs){
+    Blog.find({}, function(err,allBlogs){
       if(err){
         console.log(err);
       } else{
-        console.log(blogs);
+        blogs = allBlogs;
+        info.push(blogs);
+        // console.log(allBlogs);
       }
       
     })
-    res.send(input);
+    res.send(info);
 }
 });
 
@@ -99,6 +103,7 @@ app.post("/login", (req, res) => {
             // console.log(user);
             login = true;
             input = user;
+            info.push(input);
             res.redirect("/blog");
           }
         }

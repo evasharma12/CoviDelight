@@ -19,12 +19,11 @@ function Start() {
 
   const getUser = async () => {
     const res = await axios.get("http://localhost:8000/blog")
-    
-      setUserName(res.data[0].name);
-      // setUserEmail(res.data[0].email);
-      // setUserPassword(res.data[0].password);
-      setUserID(res.data[0]._id);
-    console.log(res.data[0]);
+      // console.log(res);
+      const userInfo = res.data[0];
+      setUserName(userInfo[0].name);
+      setUserID(userInfo[0]._id);
+    console.log(userInfo[0]);
     
     if (res.status === 200) {
       setisLoggedIn(true);
@@ -32,7 +31,7 @@ function Start() {
   };
 
   function HandleClick() {
-    console.log("triggered");
+    // console.log("triggered");
     setRegister(true);
   }
 

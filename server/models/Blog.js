@@ -6,6 +6,7 @@ console.log("Blog connection open");
 
 const blogSchema = new mongoose.Schema({
     id: String,
+    name: String,
     title: String,
     category: String,
     imageURL: String,
