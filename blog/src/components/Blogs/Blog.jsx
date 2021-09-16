@@ -18,15 +18,14 @@ function Blog(user) {
 
   const getBlogs = async()=>{
     res = await axios.get("http://localhost:8000/blog");
-    const arr = res.data;
-    // const blogs = arr[arr.length-1];
-    setBlogs(arr[arr.length-1]);
-    console.log(blogs);
+    const arr = res.data[1];
+    setBlogs(arr);
+    // console.log(arr);
   }
 
   useEffect(()=>{
     getBlogs();
-  }, [res]);
+  },[]);
 
 
   function handleAddBlog(){
@@ -35,7 +34,7 @@ function Blog(user) {
   return(
     <div>
       {createBlog ? <AddBlog id = {user.id} name = {user.name}/>
-      : <AllBlogs click = {handleAddBlog}/>}
+      : <AllBlogs click = {handleAddBlog} dbBlogs = {blogs}/>}
     </div>
   );
 }

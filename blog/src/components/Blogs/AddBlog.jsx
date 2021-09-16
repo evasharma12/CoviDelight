@@ -29,14 +29,15 @@ function AddBlog(user) {
       <div id="create-blog">
         <h1 id = "add-blog-head"><i class="fas fa-pen-fancy"></i>    Unleash your writer</h1>
         <form id="blog-input" method="post" action="/add-blog">
-          <input id = "addBlog-input" type="text" value={user.id} name="id"  style = {style}/>
-          <input id = "addBlog-input" type="text" value={user.name} name="name" style = {style}/>
+          <input id = "addBlog-input" type="text" value={user.id} name="id"  style = {style} required/>
+          <input id = "addBlog-input" type="text" value={user.name} name="name" style = {style} required/>
           <input
           id = "addBlog-input"
             onChange={handleInput}
             type="text"
             placeholder="Title of your Blog"
             name="title"
+            required
           />
           <select
           id = "addBlog-input"
@@ -66,14 +67,17 @@ function AddBlog(user) {
           <img id = "addBlog-img" src={data.imageURL} alt="blog-img" />
             </div>
           
-          <input
+          <textarea
           id = "addBlog-input"
+          class = "add-content"
             onChange={handleInput}
             type="text"
             placeholder="Write your content here"
             name="content"
+            required
           />
-          <button >Submit</button>
+          <div id = "submit-blog-div"><button id = "submit-blog">Submit</button></div>
+          
         </form>
       </div>
     </div>

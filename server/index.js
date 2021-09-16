@@ -21,12 +21,12 @@ app.use(function (req, res, next) {
 app.use(express.json());
 
 let login = false;
-
+let info;
 let input;
 let blogs;
 
 app.get("/blog", (req, res) => {
-let info = [];
+  info = [];
 //   res.send();
 if(login){
     Blog.find({}, function(err,allBlogs){
@@ -34,6 +34,7 @@ if(login){
         console.log(err);
       } else{
         blogs = allBlogs;
+        info.push(input);
         info.push(blogs);
         // console.log(allBlogs);
       }

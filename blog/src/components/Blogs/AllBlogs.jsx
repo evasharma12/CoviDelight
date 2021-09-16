@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "./Blog.css";
 import BlogCard from "./BlogCard";
 
-
 //Recieves all the blogs as props
 //Sends request to parent comp on add blog button click
 //filters props on the basis of user id if my blogs requested
@@ -11,6 +10,7 @@ import BlogCard from "./BlogCard";
 //blog on the basis on blog id.
 
 function AllBlogs(props) {
+  
   return (
     <div id="blogs">
       <div id="navbar">
@@ -44,8 +44,11 @@ function AllBlogs(props) {
           </ul>
         </div>
       </div>
-
-      <BlogCard />
+      <div id="blog-cards-grid">{ typeof(props.dbBlogs) !== "undefined" && 
+     (props.dbBlogs.map((blog, index)=>{
+       return <BlogCard key = {index} title = {blog.title} content = {blog.content} category = {blog.category}/>
+     }))}</div>
+      
     </div>
   );
 }
