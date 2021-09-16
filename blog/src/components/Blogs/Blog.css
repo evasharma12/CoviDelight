@@ -1,8 +1,12 @@
 /* COMMON BLOGS PAGE */
 #blogs{
     background-image: url("https://i.pinimg.com/564x/e5/d3/f0/e5d3f0f51b3913a5e0bd5452f1732e2c.jpg");
+    background-image: url("https://i.pinimg.com/564x/f6/13/ea/f613ea8938b0dc0132d942dad9a2de01.jpg");
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
     padding: 0 0 3% 0;
 }
 button{
@@ -41,18 +45,23 @@ button{
 /* BLOG CARD */
 #blog-card{
     width: 250px;
-    background-color: rgb(250, 215, 218);
+    background-color: rgb(250, 250, 250);
     margin: 10% 10% 0 10%;
-    border-radius: 10px;
-    padding: 1% 2% 0 2%;
+    border-radius: 15px;
+    padding: 4% 4% 0 4%;
     text-align: center;
+    opacity: 0.9;
 }
 #blog-card:hover{
     background-color: rgb(243, 243, 217);
 }
+#blog-card:hover > #blog-text{
+    box-shadow: -3px -3px 2px 1px white inset,3px 3px 2px 1px rgb(211, 209, 209) inset ;
+}
 #blog-card-upper-div{
-    background-color: white;
-    box-shadow: 3px 3px 2px 1px rgb(199, 199, 199) inset;
+    background-color: rgb(250, 250, 250);
+    box-shadow: -3px -3px 2px 1px white inset,3px 3px 2px 1px rgb(211, 209, 209) inset ;
+    
     padding: 2% 5%;
     border-radius: 20px;
     margin-bottom: 7%;
@@ -66,8 +75,8 @@ button{
     font-style: italic;
 }
 #blog-text{
-    box-shadow: 1px 1px 2px 1px rgb(230, 230, 230) inset;
-    background-color: white;
+    box-shadow: -3px -3px 2px 1px white ,2px 2px 2px 1px rgb(211, 209, 209);
+    background-color: rgb(250, 250, 250);
     padding:  5%;
     border-radius: 20px;
     text-align: justify;
@@ -102,22 +111,44 @@ button{
 /* ADD BLOG PAGE */
 
 #add-blog{
-    background-image: url("https://i.pinimg.com/564x/fb/cd/75/fbcd75065d595988389b5fc325b3eaf8.jpg");
+    /* background-image: url("https://i.pinimg.com/564x/2b/50/a7/2b50a746f2fbaca5dce6a4239771f6db.jpg"); */
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 3% 10%;
+    background-position: center;
+padding: 3% 2%;
     text-align: center;
     box-sizing: border-box;
+    background-attachment: fixed;
     
 }
 #add-blog-head{
     text-align: left;
+    color: rgb(243, 243, 243);
 }
 #blog-input{
-    padding: 3% 2%;
-    margin-top: 5%;
+    padding: 5% 2%;
+    margin-top: 3%;
     text-align: center;
     border: 2px solid black;
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 20px;
+}
+#flex3{
+    display: flex;
+    margin-bottom: 3%;
+}
+.flex3-left{
+    flex:3;
+    text-align: left;
+    padding-left: 9%;
+    
+}
+.flex3-right{
+    flex:1;
+    text-align: left;
+    
 }
 #addBlog-input{
     display: inline-block;
@@ -125,8 +156,9 @@ button{
     outline: none;
     margin-bottom: 3%;
     border: 0;
-    background-color: transparent;
-    border-bottom: 1px solid black;
+    background-color: rgb(243, 243, 243);
+    border-radius: 20px;
+    /* border-bottom: 1px solid black; */
     font-size: 1rem;
     padding: 1%;
 }
@@ -134,23 +166,26 @@ button{
     border-right: 1px solid black;
 } */
 #addBlog-input:hover{
-    background-color: rgb(247, 247, 235);
+    background-color: rgb(226, 226, 226);
     padding: 1%;
     border-radius: 20px;
     border:0;
 }
-#img-div{
-    margin: 3% 15%;
-}
+
 #addBlog-img{
     margin:0;
     border-radius: 20px;
     box-shadow: 2px 2px 2px 1px rgb(211, 211, 211);
-    max-height: 20vh;
+    max-height: 25vh;
 }
 .add-content{
     height: 20vh;
     border-radius: 20px;
+    
+}
+#create-blog textarea{
+    background-color: rgb(243, 243, 243);
+    width: 80%;
 }
 .select-cat:hover{
     border-radius: 20px 20px 0 0;
@@ -163,9 +198,12 @@ button{
     background-color: black;
     color: white;
     border-radius: 10px;
+    font-family: monospace;
+    font-size: 1rem;
 }
 #submit-blog:hover{
-    background-color: beige;
+    background-color: rgb(228, 228, 228);
+    box-shadow: 2px 2px 3px 1px rgb(119, 119, 119) inset;
     color: black;
 }
 @media screen and (max-width:650px) {
