@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./Blog.css";
 import BlogCard from "./BlogCard";
+import ViewBlog from "./ViewBlog";
 
 //Recieves all the blogs as props
 //Sends request to parent comp on add blog button click
@@ -10,45 +11,77 @@ import BlogCard from "./BlogCard";
 //blog on the basis on blog id.
 
 function AllBlogs(props) {
-  
-  return (
-    <div id="blogs">
-      <div id="navbar">
-        <div id="left-nav">
-          <ul>
-            <li id="logo">
-              <p>
-                <i class="fas fa-pills"></i> CoviDelight
-              </p>
-            </li>
-            <li className="p">
-              <a href="">Categories</a>
-            </li>
-            <li className="p">
-              <button id="add-blog-button" onClick={props.click}>
-                Add Blog
-              </button>
-            </li>
-            <li className="p">
-              <a href="">My Blogs</a>
-            </li>
-            <li className="p">
-              <a href="">360° Tour</a>
-            </li>
+  const [viewBlog, setViewBlog] = useState(false);
 
-            <div id="login">
-              <form method="post" action="/logout">
-                <button id="login-button">Logout</button>
-              </form>
-            </div>
-          </ul>
-        </div>
-      </div>
-      <div id="blog-cards-grid">{ typeof(props.dbBlogs) !== "undefined" && 
-     (props.dbBlogs.map((blog, index)=>{
-       return <BlogCard key = {index} title = {blog.title} content = {blog.content} category = {blog.category}/>
-     }))}</div>
+  // function handleReadMore() {
+  //   // props.dbBlogs.map((blog,index)=>{
+
+  //   //   if(blog._id === blogid){
+
+  //   //     <div>
+  //   //       <ViewBlog/>
+  //   //     </div>
+  //   //   }
+  //   // })
+  //   // console.log(event);
+  //   handleViewBlog();
+    
+  // }
+  // function handleViewBlog(){
+  //   setViewBlog(!viewBlog);
+  // }
+
+  return (
+    <div>
+      {viewBlog ? <ViewBlog Blogs = {props.dbBlogs} /> : 
       
+      <div id="blogs">
+        <div id="navbar">
+          <div id="left-nav">
+            <ul>
+              <li id="logo">
+                <p>
+                  <i class="fas fa-pills"></i> CoviDelight
+                </p>
+              </li>
+              <li className="p">
+                <a href="">Categories</a>
+              </li>
+              <li className="p">
+                <button id="add-blog-button" onClick={props.click}>
+                  Add Blog
+                </button>
+              </li>
+              <li className="p">
+                <a href="">My Blogs</a>
+              </li>
+              <li className="p">
+                <a href="">360° Tour</a>
+              </li>
+
+              <div id="login">
+                <form method="post" action="/logout">
+                  <button id="login-button">Logout</button>
+                </form>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div id="blog-cards-grid">
+          {typeof props.dbBlogs !== "undefined" &&
+            props.dbBlogs.map((blog, index) => {
+              return (
+                <BlogCard
+                  key={index}
+                  title={blog.title}
+                  content={blog.content}
+                  category={blog.category}
+                  // click = {handleReadMore}
+                />
+              );
+            })}
+        </div>
+      </div>}
     </div>
   );
 }

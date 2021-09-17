@@ -20,7 +20,7 @@ function Blog(user) {
     res = await axios.get("http://localhost:8000/blog");
     const arr = res.data[1];
     setBlogs(arr);
-    // console.log(arr);
+    console.log(arr);
   }
 
   useEffect(()=>{

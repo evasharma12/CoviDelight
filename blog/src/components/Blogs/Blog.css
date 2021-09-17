@@ -8,6 +8,7 @@
     background-attachment: fixed;
     background-position:center;
     padding: 0 0 3% 0;
+    height: 100vh;
 }
 button{
     border: 0;
@@ -86,6 +87,7 @@ button{
     /* border-bottom: 15px solid rgb(250, 215, 218); */
     overflow: hidden;
     height: 210px;
+    line-height: 1.5;
 }
 #read-more button{
     display: none;
@@ -134,6 +136,7 @@ padding: 3% 2%;
     background-color: white;
     opacity: 0.9;
     border-radius: 20px;
+    
 }
 #flex3{
     display: flex;
