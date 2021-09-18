@@ -44,9 +44,7 @@ function AllBlogs(props) {
                   <i class="fas fa-pills"></i> CoviDelight
                 </p>
               </li>
-              <li className="p">
-                <a href="">Categories</a>
-              </li>
+              
               <li className="p">
                 <button id="add-blog-button" onClick={props.click}>
                   Add Blog
@@ -67,7 +65,7 @@ function AllBlogs(props) {
             </ul>
           </div>
         </div>
-        <div id="blog-cards-grid">
+        <div id = "blog-cards-div">
           {typeof props.dbBlogs !== "undefined" &&
             props.dbBlogs.map((blog, index) => {
               return (
@@ -76,6 +74,7 @@ function AllBlogs(props) {
                   title={blog.title}
                   content={blog.content}
                   category={blog.category}
+                  image = {blog.imageURL}
                   // click = {handleReadMore}
                 />
               );
