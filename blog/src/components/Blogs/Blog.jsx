@@ -14,6 +14,8 @@ import axios from "axios";
 function Blog(user) {
   const [createBlog, setCreateBlog] = useState(false);
   const [blogs, setBlogs] = useState();
+  const [myBlogs, setMyBlogs] = useState(false);
+  const [myBlogsArr, setMyBlogsArr] = useState([]);
   let res;
 
   const getBlogs = async()=>{
@@ -31,10 +33,21 @@ function Blog(user) {
   function handleAddBlog(){
     setCreateBlog(true);
   }
+  function handleMyBlogs(){
+    console.log("clicked");
+    blogs.forEach((blog)=>{
+      if(blog.id === user.id){
+        console.log(blog.title);
+        myBlogsArr.push(blog);
+      }
+
+    });
+    setMyBlogs(true);
+  }
   return(
     <div>
       {createBlog ? <AddBlog id = {user.id} name = {user.name}/>
-      : <AllBlogs click = {handleAddBlog} dbBlogs = {blogs}/>}
+      : <AllBlogs click = {handleAddBlog} dbBlogs = {!myBlogs ? blogs : myBlogsArr} click = {handleMyBlogs}/>}
     </div>
   );
 }

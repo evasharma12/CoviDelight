@@ -31,6 +31,7 @@ function AllBlogs(props) {
   //   setViewBlog(!viewBlog);
   // }
 
+
   return (
     <div>
       {viewBlog ? <ViewBlog Blogs = {props.dbBlogs} /> : 
@@ -51,7 +52,9 @@ function AllBlogs(props) {
                 </button>
               </li>
               <li className="p">
-                <a href="">My Blogs</a>
+              <button id="add-blog-button" onClick={props.click}>
+                  My Blogs
+                </button>
               </li>
               <li className="p">
                 <a href="">360° Tour</a>
