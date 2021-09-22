@@ -19,12 +19,12 @@ function StartPage(props) {
             <li className="p">
               <a href="">Motivation</a>
             </li>
-            <li className="p">
+            {/* <li className="p">
               <a href="">Reviews</a>
             </li>
             <li className="p">
               <a href="">Contact Us</a>
-            </li>
+            </li> */}
 
             <div id="login">
               <button id="login-button" onClick={props.Click}>

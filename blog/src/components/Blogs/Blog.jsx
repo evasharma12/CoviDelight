@@ -47,7 +47,7 @@ function Blog(user) {
   return(
     <div>
       {createBlog ? <AddBlog id = {user.id} name = {user.name}/>
-      : <AllBlogs click = {handleAddBlog} dbBlogs = {!myBlogs ? blogs : myBlogsArr} click = {handleMyBlogs}/>}
+      : <AllBlogs addBlog = {handleAddBlog} dbBlogs = {!myBlogs ? blogs : myBlogsArr} myBlogs = {handleMyBlogs}/>}
     </div>
   );
 }

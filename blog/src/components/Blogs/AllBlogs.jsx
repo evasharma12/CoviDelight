@@ -12,29 +12,25 @@ import ViewBlog from "./ViewBlog";
 
 function AllBlogs(props) {
   const [viewBlog, setViewBlog] = useState(false);
+  const [blogToView, setBlogToView] = useState();
 
-  // function handleReadMore() {
-  //   // props.dbBlogs.map((blog,index)=>{
-
-  //   //   if(blog._id === blogid){
-
-  //   //     <div>
-  //   //       <ViewBlog/>
-  //   //     </div>
-  //   //   }
-  //   // })
-  //   // console.log(event);
-  //   handleViewBlog();
+  function handleViewBlog(blogID){
+    props.dbBlogs.forEach((blog)=>{
+      if(blog._id === blogID){
+        setBlogToView(blog);
+        setViewBlog(true);
+      }
+    });
     
-  // }
-  // function handleViewBlog(){
-  //   setViewBlog(!viewBlog);
-  // }
+  }
 
+  function handleNotViewBlog(){
+    setViewBlog(false);
+  }
 
   return (
     <div>
-      {viewBlog ? <ViewBlog Blogs = {props.dbBlogs} /> : 
+      {viewBlog ? <ViewBlog Blog = {blogToView} back = {handleNotViewBlog}/> : 
       
       <div id="blogs">
         <div id="navbar">
@@ -47,18 +43,18 @@ function AllBlogs(props) {
               </li>
               
               <li className="p">
-                <button id="add-blog-button" onClick={props.click}>
+                <button id="add-blog-button" onClick={props.addBlog}>
                   Add Blog
                 </button>
               </li>
               <li className="p">
-              <button id="add-blog-button" onClick={props.click}>
+              <button id="add-blog-button" onClick={props.myBlogs}>
                   My Blogs
                 </button>
               </li>
-              <li className="p">
+              {/* <li className="p">
                 <a href="">360° Tour</a>
-              </li>
+              </li> */}
 
               <div id="login">
                 <form method="post" action="/logout">
@@ -78,7 +74,8 @@ function AllBlogs(props) {
                   content={blog.content}
                   category={blog.category}
                   image = {blog.imageURL}
-                  // click = {handleReadMore}
+                  _id = {blog._id}
+                  click = {handleViewBlog}
                 />
               );
             })}
