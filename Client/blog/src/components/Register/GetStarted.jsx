@@ -7,6 +7,8 @@ import StartPage from "./StartPage";
 function Start() {
   const [register, setRegister] = useState(false);
   const [isLoggedIn, setisLoggedIn] = useState(false);
+  const [blog, setBlog] = useState(false);
+  const [tour, setTour] = useState(false);
   const [userName, setUserName] = useState("");
   // const [userEmail, setUserEmail] = useState("");
   // const [userPassword, setUserPassword] = useState("");
