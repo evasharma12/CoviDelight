@@ -120,7 +120,22 @@ app.post("/logout",(req,res)=>{
 });
 
 app.get('*',(req,res)=>{
-  res.send("Hello");
+  info = [];
+//   res.send();
+if(login){
+    Blog.find({}, function(err,allBlogs){
+      if(err){
+        console.log(err);
+      } else{
+        blogs = allBlogs;
+        info.push(input);
+        info.push(blogs);
+        // console.log(allBlogs);
+      }
+    res.send(info);
+      
+    })
+}
 })
 app.listen(process.env.PORT || 8000, () => {
   console.log("Server started at port 8000");
