@@ -117,6 +117,10 @@ app.post("/login", (req, res) => {
 app.post("/logout",(req,res)=>{
     login = false;
     res.redirect("/blog");
+});
+
+app.get('*',(req,res)=>{
+  res.send("Hello");
 })
 app.listen(process.env.PORT || 8000, () => {
   console.log("Server started at port 8000");
