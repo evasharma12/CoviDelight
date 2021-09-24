@@ -25,7 +25,7 @@ let info;
 let input;
 let blogs;
 
-app.get("/blog", (req, res) => {
+app.get("/", (req, res) => {
   info = [];
 //   res.send();
 if(login){
@@ -44,7 +44,7 @@ if(login){
 }
 });
 
-app.post("/blog", (req, res) => {
+app.post("/", (req, res) => {
   res.send(input);
   console.log("Blog connected to node");
 });
@@ -68,7 +68,7 @@ app.post("/add-blog", (req,res)=>{
       console.log("Blog saved to db");
     }
   })
-  res.redirect("/blog");
+  res.redirect("/");
 })
 
 app.post("/login", (req, res) => {
@@ -87,7 +87,7 @@ app.post("/login", (req, res) => {
       } else {
         console.log(`${input.name}'s data saved.`);
         login = true;
-        res.redirect("/blog");
+        res.redirect("/");
       }
     });
   } else {
@@ -105,7 +105,7 @@ app.post("/login", (req, res) => {
             login = true;
             input = user;
             info.push(input);
-            res.redirect("/blog");
+            res.redirect("/");
           }
         }
       }
@@ -116,7 +116,7 @@ app.post("/login", (req, res) => {
 
 app.post("/logout",(req,res)=>{
     login = false;
-    res.redirect("/blog");
+    res.redirect("/");
 });
 
 

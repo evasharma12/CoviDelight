@@ -20,7 +20,7 @@ function Start() {
 
 
   const getUser = async () => {
-    const res = await axios.get("http://localhost:8000/blog")
+    const res = await axios.get("http://localhost:8000/")
       // console.log(res);
       const userInfo = res.data[0];
       setUserName(userInfo[0].name);
