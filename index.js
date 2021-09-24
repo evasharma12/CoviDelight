@@ -119,23 +119,19 @@ app.post("/logout",(req,res)=>{
     res.redirect("/blog");
 });
 
+
+app.get("/tour",(req,res)=>{
+  res.send("Tour page");
+});
+
+app.post("/tour",(req,res)=>{
+  console.log("Tour page connected");
+  res.redirect("/tour");
+});
+
+
 app.get('*',(req,res)=>{
-  info = [];
-//   res.send();
-if(login){
-    Blog.find({}, function(err,allBlogs){
-      if(err){
-        console.log(err);
-      } else{
-        blogs = allBlogs;
-        info.push(input);
-        info.push(blogs);
-        // console.log(allBlogs);
-      }
-    res.send(info);
-      
-    })
-}
+  res.send("Error!");
 })
 app.listen(process.env.PORT || 8000, () => {
   console.log("Server started at port 8000");
