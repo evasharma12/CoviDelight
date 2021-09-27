@@ -280,6 +280,9 @@ padding: 3% 2%;
 #view-blog-head{
     font-family: monospace;
     font-size: 4rem;
+    background-image: linear-gradient(90deg, white, rgb(224, 224, 224));
+    background-clip: text;
+    color: transparent;
 }
 #view-blog-name{
     font-family: sans-serif;
@@ -292,7 +295,7 @@ padding: 3% 2%;
     background-color: rgb(122, 122, 122);
     margin: 5% 0;
     max-height: 50vh; 
-    
+    border-radius: 15px;
 }
 #view-blog-img{
     max-height: 50vh;
