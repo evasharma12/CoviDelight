@@ -18,7 +18,7 @@ function Start() {
 
 
   const getUser = async () => {
-    const res = await axios.get("http://localhost:8000/")
+    const res = await axios.get("https://covidelight.herokuapp.com/")
       const userInfo = res.data[0];
       setUserName(userInfo[0].name);
       setUserID(userInfo[0]._id);

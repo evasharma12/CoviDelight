@@ -19,7 +19,7 @@ function Blog(user) {
   let res;
 
   const getBlogs = async()=>{
-    res = await axios.get("http://localhost:8000/");
+    res = await axios.get("https://covidelight.herokuapp.com/");
     const arr = res.data[1];
     setBlogs(arr);
     console.log(arr);
