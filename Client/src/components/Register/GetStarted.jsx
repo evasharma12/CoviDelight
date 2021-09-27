@@ -2,16 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Register from "./Register";
 import Blog from "../Blogs/Blog";
+import Tour from "../Tour/Tour";
 import StartPage from "./StartPage";
 
 function Start() {
-  const [register, setRegister] = useState(false);
-  const [isLoggedIn, setisLoggedIn] = useState(false);
   const [blog, setBlog] = useState(false);
+  const [isLoggedIn, setisLoggedIn] = useState(false);
   const [tour, setTour] = useState(false);
   const [userName, setUserName] = useState("");
-  // const [userEmail, setUserEmail] = useState("");
-  // const [userPassword, setUserPassword] = useState("");
   const [userID, setUserID] = useState("");
 
   useEffect(() => {
@@ -21,7 +19,6 @@ function Start() {
 
   const getUser = async () => {
     const res = await axios.get("http://localhost:8000/")
-      // console.log(res);
       const userInfo = res.data[0];
       setUserName(userInfo[0].name);
       setUserID(userInfo[0]._id);
@@ -33,21 +30,25 @@ function Start() {
   };
 
   function HandleClick() {
-    // console.log("triggered");
-    setRegister(true);
+    setBlog(true);
+  }
+  function handleTourClick(){
+    setTour(true);
   }
 
   return (
+  
     <div>
       {!isLoggedIn ? (
         <div>
-          {!register && (
+          {(!blog && !tour) && (
             <div id="start-div">
 
-              <StartPage Click = {HandleClick}/>
+              <StartPage Click = {HandleClick} tourClick = {handleTourClick}/>
             </div>
           )}
-          {register && <Register />}
+          {blog && <Register />}
+          {tour && <Tour/>}
         </div>
       ) : (
         <div>
@@ -56,6 +57,7 @@ function Start() {
         </div>
       )}
     </div>
+    
   );
 }
 

@@ -58,7 +58,7 @@
 }
 /* LANDING PAGE */
 .flex{
-    padding: 9% 0%;
+    padding: 5% 0%;
     display: flex;
 }
 .right, .left{
@@ -86,6 +86,32 @@
     font-size: 1.2rem;
     color: rgb(190, 189, 189)
 }
+#buttons{
+    margin-top: 5%;
+    text-align: center;
+}
+#buttons button{
+    
+    padding: 2% 10%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#blog-button{
+    background-color: beige;
+    color: black;
+    margin-right: 5%;
+}
+#blog-button:hover{
+    background-color: rgb(114, 114, 114);
+    color: black;
+}
+#tour-button{
+    background-color: white;
+}
+#tour-button:hover{
+    background-color: black;
+    color: white;
+}
 #first-icons{
     padding: 0;
     text-align: center;
@@ -93,7 +119,7 @@
 #first-icons i{
     color: rgb(190, 189, 189);
     margin-left: 5%;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 #first-icons i:hover{
     color: beige;

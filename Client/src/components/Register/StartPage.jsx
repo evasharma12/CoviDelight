@@ -1,6 +1,7 @@
 import React from "react";
 import image from "../../images/lights.jpg";
 import "./Start.css";
+import Tour from "../Tour/Tour";
 
 function StartPage(props) {
   return (
@@ -19,18 +20,12 @@ function StartPage(props) {
             <li className="p">
               <a href="">Motivation</a>
             </li>
-            {/* <li className="p">
-              <a href="">Reviews</a>
-            </li>
-            <li className="p">
-              <a href="">Contact Us</a>
-            </li> */}
 
-            <div id="login">
+            {/* <div id="login">
               <button id="login-button" onClick={props.Click}>
                 Login
               </button>
-            </div>
+            </div> */}
           </ul>
         </div>
       </div>
@@ -45,6 +40,10 @@ function StartPage(props) {
               A platform which helps you to overcome Covid Trauma caused by lack
               of interaction with people and the outer world.
             </p>
+            <div id = "buttons">
+              <button onClick={props.Click} id = "blog-button">Blog</button>
+              <button onClick = {props.tourClick} id = "tour-button">360 Tour</button>
+            </div>
             <div id = "first-icons">
               <a
                 id = "github"
@@ -83,6 +82,7 @@ function StartPage(props) {
         </div>
         <div className="right"></div>
       </div>
+      
     </div>
   );
 }

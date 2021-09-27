@@ -120,6 +120,10 @@ app.post("/logout",(req,res)=>{
 });
 
 
+
+// TOUR PAGES
+
+
 app.get("/tour",(req,res)=>{
   res.send("Tour page");
 });
