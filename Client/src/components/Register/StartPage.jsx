@@ -1,7 +1,6 @@
 import React from "react";
 import image from "../../images/lights.jpg";
 import "./Start.css";
-import Tour from "../Tour/Tour";
 
 function StartPage(props) {
   return (
