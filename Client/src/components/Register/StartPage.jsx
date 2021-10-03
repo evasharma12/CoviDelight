@@ -20,11 +20,11 @@ function StartPage(props) {
               <a href="">Motivation</a>
             </li>
 
-            {/* <div id="login">
+            <div id="login">
               <button id="login-button" onClick={props.Click}>
                 Login
               </button>
-            </div> */}
+            </div>
           </ul>
         </div>
       </div>
@@ -41,7 +41,7 @@ function StartPage(props) {
             </p>
             <div id = "buttons">
               <button onClick={props.Click} id = "blog-button">Blog</button>
-              <button onClick = {props.tourClick} id = "tour-button">360 Tour</button>
+              {/* <button onClick = {props.tourClick} id = "tour-button">360 Tour</button> */}
             </div>
             <div id = "first-icons">
               <a
